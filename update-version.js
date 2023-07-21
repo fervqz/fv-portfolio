@@ -1,12 +1,13 @@
 import readline from 'readline';
 import semver from 'semver';
+import * as packageJson from './package.json' assert { type: "json" };
 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
-rl.question('Ingrese la nueva versión (por ejemplo, 1.2.3): ', (answer) => {
+rl.question(`Ingrese la nueva versión (actual ${packageJson.version}): `, (answer) => {
   if (semver.valid(answer)) {
     const newVersion = semver.clean(answer);
     process.env.npm_package_version = newVersion;
