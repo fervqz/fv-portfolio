@@ -12,7 +12,7 @@ const rl = readline.createInterface({
   const packageJson = JSON.parse(readFileSync('package.json', 'utf-8'));
 
   const answer = await new Promise((resolve) => {
-    rl.question(`Ingrese la nueva versión (actual ${packageJson}): `, resolve);
+    rl.question(`Ingrese la nueva versión (actual ${packageJson.version}): `, resolve);
   });
 
   if (semver.valid(answer)) {
