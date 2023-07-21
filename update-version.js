@@ -1,5 +1,6 @@
 import readline from 'readline';
 import { readFileSync, writeFileSync } from 'fs';
+import { promisify } from 'util';
 import semver from 'semver';
 
 const rl = readline.createInterface({
@@ -7,13 +8,13 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+const questionAsync = promisify(rl.question).bind(rl);
+
 (async () => {
   // Leer el contenido del package.json
   const packageJson = JSON.parse(readFileSync('package.json', 'utf-8'));
 
-  const answer = await new Promise((resolve) => {
-    rl.question(`Ingrese la nueva versión (actual ${packageJson.version}): `, resolve);
-  });
+  const answer = await questionAsync(`Ingrese la nueva versión (actual ${packageJson.version}): `);
 
   if (semver.valid(answer)) {
     const newVersion = semver.clean(answer);
