@@ -1,5 +1,5 @@
-const readline = require('readline');
-const semver = require('semver');
+import readline from 'readline';
+import semver from 'semver';
 
 const rl = readline.createInterface({
   input: process.stdin,

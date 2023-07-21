@@ -3,11 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm version"
-    }
-  },
   "scripts": {
     "version": "node update-version.js",
     "dev": "vite",
