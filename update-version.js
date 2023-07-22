@@ -1,30 +1,57 @@
 import readline from 'readline';
 import { readFileSync, writeFileSync } from 'fs';
-import { promisify } from 'util';
-import semver from 'semver';
+
+const packageJson = JSON.parse(readFileSync('package.json', 'utf-8'));
 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
-const questionAsync = promisify(rl.question).bind(rl);
+const question = `
+Update version - Select update option (current ${packageJson.version}):\n
+- Major (M)
+- Minor (m)
+- Patch (p)
+- Skip (enter)
+`;
 
-(async () => {
-  // Leer el contenido del package.json
-  const packageJson = JSON.parse(readFileSync('package.json', 'utf-8'));
+rl.question(question,
+  (answer) => {
 
-  const answer = await questionAsync(`Ingrese la nueva versión (actual ${packageJson.version}): `);
+    let shouldSkip = false;
+    let [major, minor, patch] = packageJson.version.split('.').map((v) => parseInt(v));
+    let newVersion = '';
 
-  if (semver.valid(answer)) {
-    const newVersion = semver.clean(answer);
-    packageJson.version = newVersion; // Actualizar la versión en el objeto packageJson
-    writeFileSync('package.json', JSON.stringify(packageJson, null, 2), 'utf-8'); // Escribir el archivo actualizado
-    console.log(`La versión se ha actualizado a ${newVersion}`);
-  } else {
-    console.log('Versión inválida. Por favor, ingrese una versión válida (por ejemplo, 1.2.3)');
-    process.exit(1);
-  }
+    console.log(packageJson.version.split('.').map((v) => parseInt(v)));
 
-  rl.close();
-})();
+    switch (answer) {
+      case "M":
+        major++;
+        console.log(`MAJOR version update`);
+        break;
+
+      case "m":
+        minor++;
+        console.log(`MINOR version update`);
+        break;
+
+      case "p":
+        patch++;
+        console.log(`PATCH version update`);
+        break;
+
+      default:
+        console.log('Skiping version updating');
+        shouldSkip = true;
+        break;
+    }
+
+    if (!shouldSkip) {
+      packageJson.version = `${major}.${minor}.${patch}`;
+      writeFileSync('package.json', JSON.stringify(packageJson, null, 2), 'utf-8');
+    }
+
+    rl.close();
+
+  });
