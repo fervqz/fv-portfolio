@@ -21,9 +21,6 @@ rl.question(question,
 
     let shouldSkip = false;
     let [major, minor, patch] = packageJson.version.split('.').map((v) => parseInt(v));
-    let newVersion = '';
-
-    console.log(packageJson.version.split('.').map((v) => parseInt(v)));
 
     switch (answer) {
       case "M":
