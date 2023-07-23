@@ -1,10 +1,12 @@
-import Button from '@mui/material/Button';
+// import ScreenLoaders from './screens/ScreenLoaders/ScreenLoaders';
+import ScreenShowcase from './screens/ScreenShowcase/ScreenShowcase';
 
 function App() {
   return (
     <div>
-    <Button variant="contained">Hello World</Button>
-  </div>
+      {/* <ScreenLoaders /> */}
+      <ScreenShowcase />
+    </div>
   )
 }
 
