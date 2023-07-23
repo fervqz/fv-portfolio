@@ -4,7 +4,9 @@ import { readFileSync, writeFileSync } from 'fs';
 const packageJson = JSON.parse(readFileSync('package.json', 'utf-8'));
 
 const rl = readline.createInterface({
+  // eslint-disable-next-line no-undef
   input: process.stdin,
+  // eslint-disable-next-line no-undef
   output: process.stdout
 });
 
