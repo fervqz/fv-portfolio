@@ -1,4 +1,4 @@
-import { Skeleton, Typography, TypographyProps, styled } from "@mui/material";
+import { Skeleton, Typography, TypographyProps } from "@mui/material";
 
 interface AppTypographyProps extends TypographyProps {
     loading?: boolean;
