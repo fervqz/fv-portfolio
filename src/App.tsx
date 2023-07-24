@@ -1,10 +1,10 @@
-// import ScreenLoaders from './screens/ScreenLoaders/ScreenLoaders';
+import ScreenLoaders from './screens/ScreenLoaders/ScreenLoaders';
 import ScreenShowcase from './screens/ScreenShowcase/ScreenShowcase';
 
 function App() {
   return (
     <div>
-      {/* <ScreenLoaders /> */}
+      <ScreenLoaders />
       <ScreenShowcase />
     </div>
   )

@@ -9,7 +9,7 @@ const SpinnerFullScreen: React.FC<SpinnerFullScreenProps> = (props: SpinnerFullS
     return (
         <>
             <AppBackdrop open={props.loading}>
-                <CircularProgress color="inherit" />
+                <CircularProgress color="secondary" />
             </AppBackdrop>
         </>
     );

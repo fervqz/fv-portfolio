@@ -1,5 +1,4 @@
-import { Card, CardContent, Grid } from "@mui/material";
-import AppTypography from "../../components/Common/AppTypography/AppTypography";
+import { Card, CardContent, Grid, Typography } from "@mui/material";
 import HightlightTitle from "../../components/Common/HighlightTitle/HighlightTitle";
 import LayoutScreen from "../../components/LayoutScreen/LayoutScreen";
 import AppButton from "../../components/Common/AppButton/AppButton";
@@ -19,41 +18,45 @@ const ScreenShowcase: React.FC = () => {
             <Grid container spacing={4}>
 
                 <Grid item xs={12}>
-                    <AppTypography variant="h2">
+                    <Typography variant="h2">
                         Welcome to the <HightlightTitle>Showcase</HightlightTitle>
-                    </AppTypography>
-                    <AppTypography variant="h5">
+                    </Typography>
+                    <Typography variant="h5">
                         This page is <HightlightTitle>responsive</HightlightTitle>, try it!
-                    </AppTypography>
+                    </Typography>
                 </Grid>
 
+                <Spacer />
+
                 <Grid item md={12}>
-                    <AppTypography variant="h5">
-                        There is a <code>&lt;Spacer/&gt;</code> element between <HightlightTitle>here</HightlightTitle>
-                    </AppTypography>
+                    <Typography variant="h5">
+                        There is a<code> &lt;Spacer/&gt; </code>element between <HightlightTitle>here</HightlightTitle>
+                    </Typography>
                 </Grid>
 
                 <Spacer sx={{ border: '2px dashed black' }} />
 
                 <Grid item md={12}>
-                    <AppTypography variant="h5">
+                    <Typography variant="h5">
                         and <HightlightTitle>here!</HightlightTitle>
-                    </AppTypography>
+                    </Typography>
+                </Grid>
+
+                <Spacer />
+
+                <Grid item md={12}>
+                    <Typography variant="h5">
+                        Title of the next section
+                    </Typography>
                 </Grid>
 
                 <Grid item md={12}>
-                    <AppTypography variant="h5">
-                        There is a <code>Spacer</code> element between here
-                    </AppTypography>
-                </Grid>
-
-                <Grid item md={12}>
-                    <AppTypography>
+                    <Typography>
                         Lorem ipsum dolor sit, amet <HightlightTitle>consectetur</HightlightTitle> adipisicing elit. Ea deleniti saepe hic debitis beatae quisquam maxime. Laborum veritatis culpa fuga sapiente pariatur dolores ipsam quos id, doloremque dignissimos? Esse, optio!
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium expedita excepturi magnam vel assumenda voluptatum, earum doloremque placeat culpa veniam ut libero quisquam id error, quaerat eligendi numquam, quibusdam et.
                         Suscipit quia sunt sit deserunt inventore blanditiis, labore impedit? Laudantium odit nemo mollitia doloremque, consequatur culpa atque architecto, ipsum veritatis, reprehenderit nam omnis. Numquam ducimus cumque ea. Similique, enim pariatur?
                         Commodi accusamus odit velit modi distinctio! Sequi pariatur voluptate, cupiditate unde, enim neque similique praesentium suscipit id minima magnam. Possimus perspiciatis repellat at illo tempora porro aperiam soluta blanditiis sed!
-                    </AppTypography>
+                    </Typography>
                 </Grid>
 
                 <Grid item xs={12} sm={4} md={3}>
@@ -76,12 +79,12 @@ const ScreenShowcase: React.FC = () => {
                 <Spacer />
 
                 <Grid item md={12}>
-                    <AppTypography>
+                    <Typography>
                         Lorem ipsum dolor sit, amet <HightlightTitle>consectetur</HightlightTitle> adipisicing elit. Ea deleniti saepe hic debitis beatae quisquam maxime. Laborum veritatis culpa fuga sapiente pariatur dolores ipsam quos id, doloremque dignissimos? Esse, optio!
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium expedita excepturi magnam vel assumenda voluptatum, earum doloremque placeat culpa veniam ut libero quisquam id error, quaerat eligendi numquam, quibusdam et.
                         Suscipit quia sunt sit deserunt inventore blanditiis, labore impedit? Laudantium odit nemo mollitia doloremque, consequatur culpa atque architecto, ipsum veritatis, reprehenderit nam omnis. Numquam ducimus cumque ea. Similique, enim pariatur?
                         Commodi accusamus odit velit modi distinctio! Sequi pariatur voluptate, cupiditate unde, enim neque similique praesentium suscipit id minima magnam. Possimus perspiciatis repellat at illo tempora porro aperiam soluta blanditiis sed!
-                    </AppTypography>
+                    </Typography>
                 </Grid>
 
                 <Grid item xs={12}>
@@ -113,13 +116,13 @@ const ScreenShowcase: React.FC = () => {
                     <Card variant="outlined">
                         <CardContent>
 
-                            <AppTypography variant="h5" gutterBottom>This is a example Card</AppTypography>
+                            <Typography variant="h5" gutterBottom>This is a example Card</Typography>
 
-                            <AppTypography>
+                            <Typography>
                                 Lorem ipsum dolor sit, amet <HightlightTitle>consectetur</HightlightTitle> adipisicing elit. Ea deleniti saepe hic debitis beatae quisquam maxime. Laborum veritatis culpa fuga sapiente pariatur dolores ipsam quos id, doloremque dignissimos? Esse, optio!
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium expedita excepturi magnam vel assumenda voluptatum, earum doloremque placeat culpa veniam ut libero quisquam id error, quaerat eligendi numquam, quibusdam et.
                                 Suscipit quia sunt sit deserunt inventore blanditiis, labore impedit? Laudantium odit nemo mollitia doloremque, consequatur culpa atque architecto, ipsum veritatis, reprehenderit nam omnis. Numquam ducimus cumque ea. Similique, enim pariatur?
-                            </AppTypography>
+                            </Typography>
 
                             <Spacer size="medium" />
 
@@ -152,9 +155,9 @@ const ScreenShowcase: React.FC = () => {
                 <Spacer />
 
                 <Grid item xs={12}>
-                    <AppTypography variant="h5">
+                    <Typography variant="h5">
                         Buttons
-                    </AppTypography>
+                    </Typography>
                 </Grid>
 
                 <Grid item xs={12}>
