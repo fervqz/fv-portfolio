@@ -1,5 +1,4 @@
-import { CircularProgress } from "@mui/material";
-import AppBackdrop from "../Common/AppBackdrop/AppBackdrop";
+import { Backdrop, CircularProgress } from "@mui/material";
 
 interface SpinnerFullScreenProps {
     loading: boolean;
@@ -8,9 +7,9 @@ interface SpinnerFullScreenProps {
 const SpinnerFullScreen: React.FC<SpinnerFullScreenProps> = (props: SpinnerFullScreenProps) => {
     return (
         <>
-            <AppBackdrop open={props.loading}>
-                <CircularProgress color="secondary" />
-            </AppBackdrop>
+            <Backdrop open={props.loading}>
+                <CircularProgress color="primary" />
+            </Backdrop>
         </>
     );
 }

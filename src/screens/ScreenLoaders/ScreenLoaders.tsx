@@ -1,9 +1,8 @@
-import { Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import { SetStateAction, useState } from "react";
 import LayoutScreen from "../../components/LayoutScreen/LayoutScreen";
-import AppButton from "../../components/Common/AppButton/AppButton";
-import AppLoadingButton from "../../components/Common/AppLoadingButton/AppLoadingButton";
-import HightlightTitle from "../../components/Common/HighlightTitle/HighlightTitle";
+import AppLoadingButton from "../../overwrites/LoadingButton/LoadingButton";
+import HightlightTitle from "../../components/HighlightTitle/HighlightTitle";
 import { ScreenLoadersSkeleton } from "./ScreenLoadersSkeleton";
 
 const ScreenLoaders: React.FC = () => {
@@ -47,11 +46,11 @@ const ScreenLoaders: React.FC = () => {
                             spacing={2}
                         >
                             <Grid item xs={12} sm={4} md={3}>
-                                <AppButton variant="text" onClick={() => handleClick(setIsSpinnerFullScreenLoading)} disableElevation fullWidth>Open Full Screen Spinner</AppButton>
+                                <Button variant="text" onClick={() => handleClick(setIsSpinnerFullScreenLoading)} disableElevation fullWidth>Open Full Screen Spinner</Button>
                             </Grid>
 
                             <Grid item xs={12} sm={4} md={3}>
-                                <AppButton variant="outlined" onClick={() => handleClick(setIsSpinnerFullScreenLoading)} disableElevation fullWidth>Open Full Screen Spinner</AppButton>
+                                <Button variant="outlined" onClick={() => handleClick(setIsSpinnerFullScreenLoading)} disableElevation fullWidth>Open Full Screen Spinner</Button>
                             </Grid>
 
                             <Grid item xs={12} sm={4} md={3}>

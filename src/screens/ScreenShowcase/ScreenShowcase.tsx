@@ -1,8 +1,7 @@
-import { Card, CardContent, Grid, Typography } from "@mui/material";
-import HightlightTitle from "../../components/Common/HighlightTitle/HighlightTitle";
+import { Button, Card, CardContent, Grid, Typography } from "@mui/material";
+import HightlightTitle from "../../components/HighlightTitle/HighlightTitle";
 import LayoutScreen from "../../components/LayoutScreen/LayoutScreen";
-import AppButton from "../../components/Common/AppButton/AppButton";
-import Spacer from "../../components/Common/Spacer/Spacer";
+import Spacer from "../../components/Spacer/Spacer";
 import { useEffect, useState } from "react";
 
 const ScreenShowcase: React.FC = () => {
@@ -60,20 +59,20 @@ const ScreenShowcase: React.FC = () => {
                 </Grid>
 
                 <Grid item xs={12} sm={4} md={3}>
-                    <AppButton
+                    <Button
                         variant="contained"
                         disableElevation
                         fullWidth
-                    >Test Button</AppButton>
+                    >Test Button</Button>
                 </Grid>
 
                 <Grid item xs={12} sm={4} md={3}>
-                    <AppButton
+                    <Button
                         variant="contained"
                         color="secondary"
                         disableElevation
                         fullWidth
-                    >Test Button</AppButton>
+                    >Test Button</Button>
                 </Grid>
 
                 <Spacer />
@@ -91,20 +90,20 @@ const ScreenShowcase: React.FC = () => {
                     <Grid container justifyContent="flex-end" spacing={4}>
 
                         <Grid item xs={12} sm={4} md={3}>
-                            <AppButton
+                            <Button
                                 variant="contained"
                                 color="secondary"
                                 disableElevation
                                 fullWidth
-                            >Test Button</AppButton>
+                            >Test Button</Button>
                         </Grid>
 
                         <Grid item xs={12} sm={4} md={3}>
-                            <AppButton
+                            <Button
                                 variant="contained"
                                 disableElevation
                                 fullWidth
-                            >Test Button</AppButton>
+                            >Test Button</Button>
                         </Grid>
 
                     </Grid>
@@ -113,7 +112,7 @@ const ScreenShowcase: React.FC = () => {
                 <Spacer />
 
                 <Grid item md={12}>
-                    <Card variant="outlined">
+                    <Card>
                         <CardContent>
 
                             <Typography variant="h5" gutterBottom>This is a example Card</Typography>
@@ -130,20 +129,20 @@ const ScreenShowcase: React.FC = () => {
                                 <Grid container justifyContent="flex-end" spacing={2}>
 
                                     <Grid item xs={12} sm={3} md={2}>
-                                        <AppButton
+                                        <Button
                                             variant="text"
                                             color="error"
                                             disableElevation
                                             fullWidth
-                                        >Cancelar</AppButton>
+                                        >Cancelar</Button>
                                     </Grid>
 
                                     <Grid item xs={12} sm={3} md={2}>
-                                        <AppButton
+                                        <Button
                                             variant="contained"
                                             disableElevation
                                             fullWidth
-                                        >Guardar</AppButton>
+                                        >Guardar</Button>
                                     </Grid>
 
                                 </Grid>
@@ -164,22 +163,22 @@ const ScreenShowcase: React.FC = () => {
                     <Grid container justifyContent="flex-start" spacing={4}>
 
                         <Grid item xs={12} sm={4} md={3}>
-                            <AppButton color="primary" variant="contained" disableElevation fullWidth>Primary Button</AppButton>
+                            <Button color="primary" variant="contained" disableElevation fullWidth>Primary Button</Button>
                         </Grid>
                         <Grid item xs={12} sm={4} md={3}>
-                            <AppButton color="secondary" variant="contained" disableElevation fullWidth>Secondary Button</AppButton>
+                            <Button color="secondary" variant="contained" disableElevation fullWidth>Secondary Button</Button>
                         </Grid>
                         <Grid item xs={12} sm={4} md={3}>
-                            <AppButton color="success" variant="contained" disableElevation fullWidth>Success Button</AppButton>
+                            <Button color="success" variant="contained" disableElevation fullWidth>Success Button</Button>
                         </Grid>
                         <Grid item xs={12} sm={4} md={3}>
-                            <AppButton color="info" variant="contained" disableElevation fullWidth>Info Button</AppButton>
+                            <Button color="info" variant="contained" disableElevation fullWidth>Info Button</Button>
                         </Grid>
                         <Grid item xs={12} sm={4} md={3}>
-                            <AppButton color="warning" variant="contained" disableElevation fullWidth>Warning Button</AppButton>
+                            <Button color="warning" variant="contained" disableElevation fullWidth>Warning Button</Button>
                         </Grid>
                         <Grid item xs={12} sm={4} md={3}>
-                            <AppButton color="error" variant="contained" disableElevation fullWidth>Error Button</AppButton>
+                            <Button color="error" variant="contained" disableElevation fullWidth>Error Button</Button>
                         </Grid>
 
                     </Grid>

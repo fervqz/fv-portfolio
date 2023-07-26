@@ -1,5 +1,5 @@
 import { Grid, Skeleton } from "@mui/material";
-import config from "../../config";
+import config from "../../styles/variables";
 
 const CurrentSkeleton: React.FC = () => {
 
