@@ -57,9 +57,8 @@ const theme = createTheme({
         MuiCard: {
             defaultProps: {
                 variant: 'outlined',
-                // Only apply if variant = elevation
-                raised: true,
-                elevation: 4,
+                // raised: true, Only apply if variant = elevation
+                // elevation: 4, Only apply if variant = elevation
             },
             styleOverrides: {
                 root: {

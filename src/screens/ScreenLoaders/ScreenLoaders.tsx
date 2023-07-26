@@ -9,6 +9,7 @@ const ScreenLoaders: React.FC = () => {
 
     const [isSpinnerFullScreenLoading, setIsSpinnerFullScreenLoading] = useState<boolean>(false);
     const [isButtonSpinnerLoading, setIsButtonSpinnerLoading] = useState<boolean>(false);
+    const [isSkeletonsLoading, setIsSkeletonsLoading] = useState<boolean>(false);
 
     const handleClick = (next: { (value: SetStateAction<boolean>): void; (arg0: (prev: boolean) => boolean): void; }) => {
         next((prev: boolean) => !prev);
@@ -20,7 +21,7 @@ const ScreenLoaders: React.FC = () => {
 
     return (
         <LayoutScreen loading={isSpinnerFullScreenLoading}>
-            <ScreenLoadersSkeleton loading={isButtonSpinnerLoading} >
+            <ScreenLoadersSkeleton loading={isSkeletonsLoading} >
                 <Grid container spacing={4}>
 
                     <Grid item xs={12}>
@@ -46,11 +47,11 @@ const ScreenLoaders: React.FC = () => {
                             spacing={2}
                         >
                             <Grid item xs={12} sm={4} md={3}>
-                                <Button variant="text" onClick={() => handleClick(setIsSpinnerFullScreenLoading)} disableElevation fullWidth>Open Full Screen Spinner</Button>
+                                <Button variant="text" onClick={() => handleClick(setIsSkeletonsLoading)} disableElevation fullWidth>Skeletons Loaders</Button>
                             </Grid>
 
                             <Grid item xs={12} sm={4} md={3}>
-                                <Button variant="outlined" onClick={() => handleClick(setIsSpinnerFullScreenLoading)} disableElevation fullWidth>Open Full Screen Spinner</Button>
+                                <Button variant="outlined" onClick={() => handleClick(setIsSpinnerFullScreenLoading)} disableElevation fullWidth>Full Screen Spinner</Button>
                             </Grid>
 
                             <Grid item xs={12} sm={4} md={3}>
@@ -61,7 +62,7 @@ const ScreenLoaders: React.FC = () => {
                                     fullWidth
                                     onClick={() => handleClick(setIsButtonSpinnerLoading)}
                                 >
-                                    Open Async Button
+                                    Async Button
                                 </AppLoadingButton>
                             </Grid>
                         </Grid>
