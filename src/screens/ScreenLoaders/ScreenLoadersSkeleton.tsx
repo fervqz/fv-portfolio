@@ -1,9 +1,9 @@
 import { Grid, Skeleton } from "@mui/material";
+import config from "../../config";
 
-export const SectionSekelton = () => {
+const CurrentSkeleton: React.FC = () => {
 
-    const variant = 'rounded';
-    const animation = 'wave';
+    const { variant, animation } = config.skeleton;
 
     return (
         <>
@@ -34,4 +34,12 @@ export const SectionSekelton = () => {
             </Grid>
         </>
     );
+}
+
+interface ScreenLoadersSkeleton extends React.PropsWithChildren {
+    loading: boolean;
+}
+
+export const ScreenLoadersSkeleton: React.FC<ScreenLoadersSkeleton> = (props: ScreenLoadersSkeleton) => {
+    return props.loading ? <CurrentSkeleton /> : <>{props.children}</>;
 }
