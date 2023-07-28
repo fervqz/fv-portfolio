@@ -34,12 +34,12 @@ const CurrentSkeleton: React.FC = () => {
             </Grid>
         </>
     );
-}
+};
 
 interface ScreenLoadersSkeleton extends React.PropsWithChildren {
     loading: boolean;
 }
 
-export const ScreenLoadersSkeleton: React.FC<ScreenLoadersSkeleton> = (props: ScreenLoadersSkeleton) => {
+export const ScreenLoadersSkeleton: React.FC<ScreenLoadersSkeleton> = (props) => {
     return props.loading ? <CurrentSkeleton /> : <>{props.children}</>;
-}
+};

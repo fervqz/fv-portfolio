@@ -25,7 +25,7 @@ interface SpacerProps extends BoxProps {
     size?: "small" | "medium" | "large";
 }
 
-const Spacer: React.FC<SpacerProps> = (props: SpacerProps) => {
+const Spacer: React.FC<SpacerProps> = (props) => {
 
     switch (props.size) {
         case "large":
@@ -36,7 +36,7 @@ const Spacer: React.FC<SpacerProps> = (props: SpacerProps) => {
             return <SmallBox {...props} />;
     }
 
-}
+};
 
 
 export default Spacer;

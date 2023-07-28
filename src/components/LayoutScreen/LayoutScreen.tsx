@@ -1,23 +1,20 @@
 import { Container } from "@mui/material";
 import SpinnerFullScreen from "../SpinnerFullScreen/SpinnerFullScreen";
+import React from "react";
 
 interface LayoutScreenProps extends React.PropsWithChildren {
     loading?: boolean;
 }
 
-const LayoutScreen = (props: LayoutScreenProps) => {
+const LayoutScreen: React.FC<LayoutScreenProps> = (props) => {
     return (
         <>
             <SpinnerFullScreen loading={!!props.loading} />
-            <Container data-cy="screen-layout" sx={{
-                marginTop: '1rem',
-                marginBottom: '3rem',
-                paddingBottom: '2rem',
-            }}>
+            <Container sx={{ flex: 1, paddingBottom: '4rem' }}>
                 {props.children}
-            </Container>
+            </Container >
         </>
-    )
-}
+    );
+};
 
-export default LayoutScreen;
+export default LayoutScreen;;;;

@@ -1,0 +1,38 @@
+:root {
+    --color-text-selection: #7e4bcb;
+}
+
+body,
+html,
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    /* Asegura que los elementos estén uno encima del otro */
+}
+
+body {
+    /* overflow-y: scroll; */
+    scrollbar-gutter: stable;
+}
+
+p,
+a,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    &::selection {
+        color: white;
+        -webkit-text-fill-color: color-contrast(var(--color-text-selection));
+        background: var(--color-text-selection);
+    }
+}

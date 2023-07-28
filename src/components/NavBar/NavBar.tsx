@@ -1,54 +1,31 @@
-import { Container, Stack } from "@mui/material"
-import Paths from "../../router/paths";
-import { NavLink } from "react-router-dom";
+import { Box, Container, Stack, Typography } from "@mui/material";
+import routes from "../../router/routes";
+import NavBarItem from "./NavBarItem";
 
 const NavBar: React.FC = () => {
-
-
-    const naviLinks = [
-        {
-            path: Paths.SHOWCASE,
-            title: 'Showcase',
-        },
-        {
-            path: Paths.LOADERS,
-            title: 'Loaders',
-        },
-    ];
-
     return (
-        <Container
-            sx={{
-                padding: '2rem 0px',
-            }}
-        >
+        <Container sx={{ padding: '2rem 0px' }}>
             <Stack
                 flexDirection="row"
                 spacing={4}
                 useFlexGap
-                justifyContent="center"
+                justifyContent="flex-start"
+                alignItems="center"
             >
+
+                <Box flexGrow={1}>
+                    <Typography variant="h6">Logo Placeholder</Typography>
+                </Box>
+
                 {
-                    naviLinks.map((link) => (
-                        <NavLink
-                            to={link.path}
-                            style={({ isActive }) => {
-                                return {
-                                    color: isActive ? "black" : "gray",
-                                    textDecoration: 'none',
-                                    fontWeight: 'bold',
-                                    fontSize: '1.2rem',
-                                };
-                            }}
-                        >
-                            {link.title}
-                        </NavLink>
-                    ))
+                    routes
+                        .filter(route => !!route.title)
+                        .map(route => <NavBarItem key={route.title} route={route} />)
                 }
 
             </Stack>
-        </Container>
-    )
-}
+        </Container >
+    );
+};
 
 export default NavBar;
