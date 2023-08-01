@@ -4,6 +4,7 @@ import ScreenMap from "../screens/ScreenMap/ScreenMap";
 import Paths from "./paths";
 import ScreenLoaders from "../screens/ScreenLoaders/ScreenLoaders";
 import { AppRoute } from "../types/types";
+import ScreenHome from "../screens/ScreenHome/ScreenHome";
 
 let routes: AppRoute[] = [
     {
@@ -12,7 +13,7 @@ let routes: AppRoute[] = [
     },
     {
         path: Paths.HOME,
-        element: <ScreenShowcase />,
+        element: <ScreenHome />,
         title: 'Home',
     },
     {
