@@ -9,7 +9,6 @@ This project is a template that acts as a bootstrap for any project, Proof of Co
 - ViteJS
 - TypeScript
 - Material
-- Leaflet
 - Axios
 - ESLint
 - HuskyJS
@@ -18,9 +17,6 @@ This project is a template that acts as a bootstrap for any project, Proof of Co
 
 There are two worth mentions scripts in this project:
 
-### SmoothWheelZoom.js
-
-This script enables a better zooming experience when zomming in and out the leaflet map.
 
 ### update-version.js
 
