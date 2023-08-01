@@ -1,6 +1,6 @@
 import { styled } from "@mui/material";
 import { NavLink as MuiNavLink } from "react-router-dom";
-import { AppRoute } from "../../types";
+import { AppRoute } from "../../types/types";
 
 const NavLink = styled(MuiNavLink)({
     textDecoration: 'none',

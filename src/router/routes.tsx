@@ -3,7 +3,7 @@ import ScreenShowcase from "../screens/ScreenShowcase/ScreenShowcase";
 import ScreenMap from "../screens/ScreenMap/ScreenMap";
 import Paths from "./paths";
 import ScreenLoaders from "../screens/ScreenLoaders/ScreenLoaders";
-import { AppRoute } from "../types";
+import { AppRoute } from "../types/types";
 
 let routes: AppRoute[] = [
     {
