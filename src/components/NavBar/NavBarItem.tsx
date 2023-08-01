@@ -7,11 +7,11 @@ const NavLink = styled(MuiNavLink)({
     fontSize: '1.2rem',
 });
 
-interface Props {
+interface NavBarItemProps {
     route: AppRoute;
 }
 
-const NavBarItem: React.FC<Props> = ({ route }) => {
+const NavBarItem: React.FC<NavBarItemProps> = ({ route }) => {
     return (
         <NavLink
             to={route.path as string}
