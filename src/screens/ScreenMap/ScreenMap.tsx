@@ -1,5 +1,5 @@
 import 'leaflet/dist/leaflet.css';
-import './SmoothWheelZoom';
+import '../../helpers/SmoothWheelZoom';
 import { MapContainer, MapContainerProps, Marker, TileLayer } from 'react-leaflet';
 import { useEffect, useState } from 'react';
 import { Container, Grid } from '@mui/material';
