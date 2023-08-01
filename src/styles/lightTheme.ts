@@ -24,7 +24,7 @@ const theme = createTheme({
             main: '#EF5350',
         },
         background: {
-            default: '#f8f9fd',
+            default: '#f5f5f7',
             paper: '#FFF'
         },
     },
@@ -64,6 +64,7 @@ const theme = createTheme({
                 root: {
                     padding: '1rem',
                     borderRadius: variables.card.borderRadius,
+                    borderColor: '#e8e8e8',
                 }
             }
         },

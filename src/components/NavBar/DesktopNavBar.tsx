@@ -15,7 +15,10 @@ const DesktopNavBar: React.FC = () => {
                 spacing={4}
                 useFlexGap
                 justifyContent="flex-end"
-                sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+                sx={{
+                    flex: 1,
+                    display: { xs: "none", md: "flex" },
+                }}
             >
                 {pages
                     .map(page => <NavBarItem key={`m-${page.title}`} route={page} />)}

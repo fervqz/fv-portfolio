@@ -1,9 +1,14 @@
 const Paths = {
+
     WILDCARD: '*',
+
     HOME: '/',
-    SHOWCASE: 'showcase',
-    LOADERS: 'loaders',
-    MAP: 'map',
+    ABOUT: 'about',
+    PROJECTS: 'projects',
+    EXPERIENCE: 'experience',
+    EDUCATION: 'education',
+    SKILLS: 'skills',
+
 };
 
 export default Paths;

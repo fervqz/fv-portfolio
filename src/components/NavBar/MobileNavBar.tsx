@@ -22,7 +22,6 @@ const MobileNavBar: React.FC = () => {
 
     return (
         <>
-            <NavBarLogo isMobile />
             <Box sx={{ display: { xs: "flex", md: "none" } }}>
                 <IconButton
                     size="large"
@@ -62,6 +61,15 @@ const MobileNavBar: React.FC = () => {
                     ))}
 
                 </Menu>
+            </Box>
+
+            <Box sx={{
+                position: 'absolute',
+                marginLeft: '50%',
+                transform: 'translate(-24px, 3px)', // Kerning - Align logo in center
+            }}
+            >
+                <NavBarLogo isMobile />
             </Box>
         </>
     );

@@ -7,11 +7,13 @@ interface NavBarLogoProps {
 
 const NavBarLogo: React.FC<NavBarLogoProps> = (props) => {
 
-    const logoText = 'Logo';
+    const logoText = 'Fer.';
 
     const styles = {
-        mr: 2,
+        mr: 6,
         display: { xs: "none", md: "flex" },
+        position: 'relative',
+        top: '-4px', // Kerning - Aligns logo's text with navbar links
         fontWeight: 700,
         color: "inherit",
         textDecoration: "none",

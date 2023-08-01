@@ -1,15 +1,12 @@
 import ScreenError from "../screens/ScreenError/ScreenError";
-import ScreenShowcase from "../screens/ScreenShowcase/ScreenShowcase";
-import ScreenMap from "../screens/ScreenMap/ScreenMap";
 import Paths from "./paths";
-import ScreenLoaders from "../screens/ScreenLoaders/ScreenLoaders";
 import { AppRoute } from "../types/types";
 import ScreenHome from "../screens/ScreenHome/ScreenHome";
 
 let routes: AppRoute[] = [
     {
         path: Paths.WILDCARD,
-        element: <ScreenShowcase />,
+        element: <ScreenHome />,
     },
     {
         path: Paths.HOME,
@@ -17,19 +14,24 @@ let routes: AppRoute[] = [
         title: 'Home',
     },
     {
-        path: Paths.SHOWCASE,
-        element: <ScreenShowcase />,
-        title: 'Showcase',
+        path: Paths.ABOUT,
+        element: <ScreenHome />,
+        title: 'About',
     },
     {
-        path: Paths.LOADERS,
-        element: <ScreenLoaders />,
-        title: 'Loaders',
+        path: Paths.PROJECTS,
+        element: <ScreenHome />,
+        title: 'Projects',
     },
     {
-        path: Paths.MAP,
-        element: <ScreenMap />,
-        title: 'Map',
+        path: Paths.EDUCATION,
+        element: <ScreenHome />,
+        title: 'Education',
+    },
+    {
+        path: Paths.SKILLS,
+        element: <ScreenHome />,
+        title: 'Skills',
     },
 ];
 
