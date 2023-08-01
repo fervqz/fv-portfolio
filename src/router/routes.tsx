@@ -11,6 +11,11 @@ let routes: AppRoute[] = [
         element: <ScreenShowcase />,
     },
     {
+        path: Paths.HOME,
+        element: <ScreenShowcase />,
+        title: 'Home',
+    },
+    {
         path: Paths.SHOWCASE,
         element: <ScreenShowcase />,
         title: 'Showcase',
