@@ -67,7 +67,7 @@ const MobileNavBar: React.FC = () => {
             <Box sx={{
                 position: 'absolute',
                 marginLeft: '50%',
-                transform: 'translate(-27px, 3px)', // Kerning - Align logo in center
+                transform: 'translate(-29px, 3px)', // Kerning - Align logo in center
             }}
             >
                 <NavBarLogo isMobile />
