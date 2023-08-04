@@ -4,15 +4,17 @@ import Container from "@mui/material/Container";
 
 import DesktopNavBar from "../DesktopNavBar/DesktopNavBar";
 import MobileNavBar from "../MobileNavBar/MobileNavBar";
-import theme from "../../../styles/lightTheme";
 
 const NavBar: React.FC = () => {
     return (
         <AppBar
             position="static"
-            // color="transparent"
             elevation={0}
-            sx={{ padding: '1.5rem 0', backgroundColor: theme.palette.background.default }}
+            sx={{
+                paddingTop: '1rem',
+                paddingBottom: '0.8rem',
+                background: '#F0F0F0',
+            }}
         >
             <Container>
                 <Toolbar component="nav" disableGutters>
