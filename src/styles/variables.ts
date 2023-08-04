@@ -6,9 +6,9 @@ export default {
         animation: 'wave',
     } as SkeletonProps,
     button: {
-        borderRadius: '4px',
+        borderRadius: '0px',
     },
     card: {
-        borderRadius: '4px',
+        borderRadius: '0px',
     },
 }

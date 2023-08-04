@@ -6,6 +6,7 @@ import lightTheme from './styles/lightTheme.ts';
 import { ThemeProvider } from '@emotion/react';
 import { CssBaseline } from '@mui/material';
 import darkTheme from './styles/darkTheme.ts';
+import './i18n.ts';
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';

@@ -1,42 +1,30 @@
-import ScreenError from "../screens/ScreenError/ScreenError";
-import Paths from "./paths";
+import ErrorPage from "../screens/ErrorPage/ErrorPage";
+import Paths from "../consts/paths";
 import { AppRoute } from "../types/types";
-import ScreenHome from "../screens/ScreenHome/ScreenHome";
+import HomePage from "../screens/HomePage/HomePage";
+import Projects from "../screens/Projects/Projects";
 
 let routes: AppRoute[] = [
     {
         path: Paths.WILDCARD,
-        element: <ScreenHome />,
+        element: <ErrorPage />,
     },
     {
         path: Paths.HOME,
-        element: <ScreenHome />,
+        element: <HomePage />,
         title: 'Home',
-    },
-    {
-        path: Paths.ABOUT,
-        element: <ScreenHome />,
-        title: 'About',
+        addToNavBar: true,
     },
     {
         path: Paths.PROJECTS,
-        element: <ScreenHome />,
+        element: <Projects />,
         title: 'Projects',
-    },
-    {
-        path: Paths.EDUCATION,
-        element: <ScreenHome />,
-        title: 'Education',
-    },
-    {
-        path: Paths.SKILLS,
-        element: <ScreenHome />,
-        title: 'Skills',
+        addToNavBar: true,
     },
 ];
 
 routes = routes.map((route: AppRoute) => {
-    return { ...route, errorElement: <ScreenError /> };
+    return { ...route, errorElement: <ErrorPage /> };
 });
 
 export default routes;

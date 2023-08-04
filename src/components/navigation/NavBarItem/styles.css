@@ -1,0 +1,47 @@
+/* Styles for accessibility indicator of active navbar element */
+
+.MuiToolbar-root .MuiStack-root a {
+    position: relative;
+}
+
+.MuiToolbar-root .MuiStack-root a:before {
+    content: '';
+    opacity: 0;
+    background-color: black;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -8px;
+    margin-left: calc(50% - 4px);
+}
+
+@keyframes navitem {
+    from {
+        color: gray;
+    }
+
+    to {
+        color: black;
+    }
+}
+
+@keyframes navdot {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.MuiToolbar-root .MuiStack-root a.active:before {
+    animation: navdot 0.25s ease-in-out forwards 0s;
+}
+
+.MuiToolbar-root .MuiStack-root a.active {
+    animation: navitem 0.25s ease-in-out forwards 0s;
+}
+
+/* End of accessibility indicator of active navbar element */

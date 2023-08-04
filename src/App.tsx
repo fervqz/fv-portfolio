@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import routes from "./router/routes";
-import NavBar from "./components/NavBar/NavBar";
+import NavBar from "./components/navigation/NavBar/NavBar";
+import Footer from "./components/navigation/Footer/Footer";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
           routes.map(route => <Route key={route.path} {...route} />)
         }
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

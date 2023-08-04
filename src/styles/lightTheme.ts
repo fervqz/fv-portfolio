@@ -5,7 +5,7 @@ const theme = createTheme({
     palette: {
         mode: 'light',
         primary: {
-            main: '#3F2305',
+            main: '#000',
             // dark: 'red',
         },
         secondary: {
@@ -36,6 +36,7 @@ const theme = createTheme({
                     padding: '15px 30px',
                     textTransform: 'none',
                     fontWeight: '600',
+                    boxShadow: 'none',
                 },
             },
         },
@@ -64,7 +65,7 @@ const theme = createTheme({
                 root: {
                     padding: '1rem',
                     borderRadius: variables.card.borderRadius,
-                    borderColor: '#e8e8e8',
+                    borderColor: '#F1F1F1',
                 }
             }
         },
