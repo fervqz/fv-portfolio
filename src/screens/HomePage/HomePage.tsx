@@ -1,12 +1,11 @@
-import { Card, CardContent, Grid } from "@mui/material";
+import { Card, CardContent, Container, Grid } from "@mui/material";
 
-import ScreenLayout from "../../components/common/Screenlayout/ScreenLayout";
 import Hero from "../../components/common/Hero/Hero";
 
 const HomePage = () => {
 
     return (
-        <ScreenLayout isContainer>
+        <Container sx={{ flex: 1, paddingTop: '4rem', paddingBottom: '4rem' }}>
 
             <Hero />
 
@@ -24,7 +23,7 @@ const HomePage = () => {
 
             </Grid>
 
-        </ScreenLayout >
+        </Container>
     );
 };
 
