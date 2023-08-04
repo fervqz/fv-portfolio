@@ -2,6 +2,10 @@ import { Grid, Typography, Box, Button } from "@mui/material";
 import HightlightTitle from "../HighlightTitle/HighlightTitle";
 import HeroImg from "../../../assets/img/me_hero.png";
 import { useTranslation } from "react-i18next";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LaunchIcon from '@mui/icons-material/Launch';
+import { Link } from 'react-router-dom';
+import config from '../../../consts/config';
 
 const Hero: React.FC = () => {
 
@@ -42,10 +46,31 @@ const Hero: React.FC = () => {
                     {t('home.hero-subtitle')}
                 </Typography>
 
-                <Box sx={{ paddingTop: '2rem' }}>
-                    <Button variant="contained">{t('home.hero-button')}</Button>
-                </Box>
+                <Grid container spacing={2} sx={{ paddingTop: '2rem' }}>
 
+                    <Grid item xs={12} md={4}>
+                        <Button
+                            variant="contained"
+                            fullWidth
+                        >
+                            {t('home.hero-button')}
+                        </Button>
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                        <Button
+                            variant="outlined"
+                            startIcon={<GitHubIcon />}
+                            endIcon={<LaunchIcon />}
+                            fullWidth
+                            component={Link}
+                            to={config.gitHubUrl}
+                            target="_blank"
+                        >
+                            {t('home.hero-button2')}
+                        </Button>
+                    </Grid>
+
+                </Grid>
             </Grid>
 
             <Grid
