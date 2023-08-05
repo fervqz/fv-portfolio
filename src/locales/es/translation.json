@@ -1,0 +1,21 @@
+{
+  "translation": {
+    "home": {
+      "hero-title": "Fernando Vásquez 👋",
+      "hero-subtitle-highlight": "Desarrollador Front-End",
+      "hero-subtitle": " con +4 años de experiencia creando aplicaciones con React, TypeScript y servicios en la nube como AWS",
+      "hero-button": "¡Contáctame!",
+      "hero-button2": "Mi GitHub"
+    },
+    "ErrorPage": {
+      "message": "Oh oh, página no encontrada",
+      "button": "Vovler al inicio"
+    },
+    "locales": {
+      "en-label": "Inglés",
+      "en-icon": "🇺🇸",
+      "es-label": "Español",
+      "es-icon": "🇪🇸"
+    }
+  }
+}

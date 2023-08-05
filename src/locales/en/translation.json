@@ -1,0 +1,21 @@
+{
+  "translation": {
+    "home": {
+      "hero-title": "Fernando Vásquez 👋",
+      "hero-subtitle-highlight": "Front-End Developer",
+      "hero-subtitle": " with +4 years of experience using React, TypeScript and cloud services such as AWS",
+      "hero-button": "Contact Me!",
+      "hero-button2": "My GitHub"
+    },
+    "ErrorPage": {
+      "message": "Oh oh, page not found",
+      "button": "Take me back home!"
+    },
+    "locales": {
+      "en-label": "English",
+      "en-icon": "🇺🇸",
+      "es-label": "Spanish",
+      "es-icon": "🇪🇸"
+    }
+  }
+}
